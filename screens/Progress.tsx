@@ -7,6 +7,7 @@ export default function Progress() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Welcome to the Progress Hub</Text>
+            <Text style={styles.introduction}></Text>
         </View>
     )
     
@@ -22,5 +23,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 25,
+    },
+    introduction: {
+        fontSize: 20,
     }
+    
 });
