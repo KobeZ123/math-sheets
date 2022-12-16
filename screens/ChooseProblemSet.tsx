@@ -1,23 +1,29 @@
-import React from "react";
-import { View, StyleSheet, Text, Button, Pressable, TouchableOpacity, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, Text, Button, Pressable, TouchableOpacity, ScrollView, Modal } from "react-native";
 
 
-const WorkPages: string[] = [
-    "one", "two", "three", "four", "five", "six", "seven"
-]
+import WORKSHEETS from "../data/worksheets.json"
     
 
 export default function ChooseProblemSet() {
+    const [openModal, setOpenModal] = useState(false);
     return (
-      
+        
         <ScrollView contentContainerStyle={styles.scrollview}>
         {
-            WorkPages.map(
+            WORKSHEETS.worksheetNames.map(
                 (item: string) => 
-                    <TouchableOpacity style={styles.button} key={item} >
-                        <Text>{item}</Text>
+                    <TouchableOpacity style={styles.button} key={item} onPress={(e) => setOpenModal(true)}>
+                        <Text style={styles.worksheet_label}>{item}</Text>
                     </TouchableOpacity>)   
         }
+        <Modal
+            animationType="slide"
+            transparent={false}
+            visible={openModal}
+            onRequestClose={(e) => setOpenModal(false)}>
+            <Text>HERE I AM </Text>
+        </Modal>
         </ScrollView>
       
     );
@@ -37,8 +43,11 @@ export default function ChooseProblemSet() {
         margin: 5,
         padding: 5,
         borderRadius: 10,
-        height: 100,
-
+        paddingVertical: 15,
+    },
+    worksheet_label: {
+        fontSize: 20,
+        fontWeight: '500',
     },
     separator: {
       marginVertical: 30,
