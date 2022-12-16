@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, Button, Pressable, TouchableOpacity, ScrollView, Modal } from "react-native";
 
 
-import WORKSHEETS from "../data/worksheets.json"
+import { TOPICS } from '../constants/Constants'
+import ProblemSetModal from "./ProblemSetModal";
     
 
 export default function ChooseProblemSet() {
@@ -11,19 +12,13 @@ export default function ChooseProblemSet() {
         
         <ScrollView contentContainerStyle={styles.scrollview}>
         {
-            WORKSHEETS.worksheetNames.map(
+            TOPICS.map(
                 (item: string) => 
                     <TouchableOpacity style={styles.button} key={item} onPress={(e) => setOpenModal(true)}>
                         <Text style={styles.worksheet_label}>{item}</Text>
                     </TouchableOpacity>)   
         }
-        <Modal
-            animationType="slide"
-            transparent={false}
-            visible={openModal}
-            onRequestClose={(e) => setOpenModal(false)}>
-            <Text>HERE I AM </Text>
-        </Modal>
+        <ProblemSetModal isVisible={openModal} setIsVisible={(e) => setOpenModal(false)} />
         </ScrollView>
       
     );

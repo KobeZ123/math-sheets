@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import STATISTICS from "../data/information.json"
+import { USERINFO } from "../constants/Constants"
 
 
 export default function Progress() {
@@ -8,15 +8,12 @@ export default function Progress() {
         <View style={styles.container}>
             <Text style={styles.title}>Welcome to the Progress Hub</Text>
             <Text style={styles.introduction}>You have solved:</Text>
-            <Text style={styles.progress}>{STATISTICS.problemsSolved}</Text>
+            <Text style={styles.progress}>{USERINFO.problemsSolved}</Text>
             <Text style={styles.introduction}>problems</Text>
         </View>
     )
     
 }
-
-
-
 
 const styles = StyleSheet.create({
     container: {

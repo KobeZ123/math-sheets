@@ -1,11 +1,11 @@
 {
-    "worksheetNames" : [
-        "one", 
-        "two", 
-        "three", 
-        "four", 
-        "five", 
-        "six", 
-        "seven"
+    "topics" : [
+        "Addition", 
+        "Subtraction", 
+        "Multiplication", 
+        "Division", 
+        "Fractions", 
+        "Decimals", 
+        "Word Problems"
     ]
 }
