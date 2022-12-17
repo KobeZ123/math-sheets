@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Modal, NativeSyntheticEvent, Text, TouchableOpacity, View, StyleSheet } from "react-native"
+import { ProblemInput } from "../components/ProblemInput"
 
 
 
@@ -12,9 +13,7 @@ export default function ProblemSetModal(props : ProblemSetModalProps) {
             visible={props.isVisible}
             onRequestClose={props.setIsVisible}>
             <View style={styles.container}>
-                <View style={styles.problem_panel}>
-                    <Text>RANDOM TEXT</Text>
-                </View>
+                <ProblemInput/>
                 <View style={styles.close_button_view}>
                     <TouchableOpacity 
                         style={styles.close_button}
@@ -40,11 +39,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center',
         borderColor: "#000000",
-        borderTopWidth: 3,
-        borderBottomWidth: 3,
-    },
-    problem_panel: {
-        backgroundColor: "#111111",
+        backgroundColor: 'red',
     },
     close_button_view: {
         

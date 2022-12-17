@@ -1,11 +1,25 @@
 {
     "topics" : [
-        "Addition", 
-        "Subtraction", 
-        "Multiplication", 
-        "Division", 
-        "Fractions", 
-        "Decimals", 
-        "Word Problems"
+        {
+            "topic" : "Addition"
+        },
+        {
+            "topic" : "Subtraction"
+        }, 
+        {
+            "topic" : "Multiplication"
+        }, 
+        {
+            "topic" : "Division"
+        },
+        {
+            "topic" : "Fractions"
+        },
+        {
+            "topic" : "Decimals"
+        }, 
+        {
+            "topic" : "Word Problems"
+        }
     ]
 }

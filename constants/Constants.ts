@@ -7,7 +7,9 @@ type UserInformation = {
     problemsSolved: number,
 }
 
-
+type Topic = {
+    topic: string,
+}
 
 export const USERINFO: UserInformation = user_information as UserInformation
 

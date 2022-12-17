@@ -17,3 +17,12 @@ export default {
     tabIconSelected: tintColorDark,
   },
 };
+
+
+export const COLORS = {
+  white: '#fff',
+  black: '#000',
+  grey: '#C3C3C3',
+  torquoise: '#30D5C8',
+  gold: '#F5DF68',
+}
