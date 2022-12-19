@@ -13,4 +13,8 @@ export function GenerateBinaryOperation(operation: string) {
     }
 }
 
-// 
+// generates a number based on the minimun condition and the maximum condition 
+export function GenerateNumber(minNum: number, maxNum: number): number {
+    let number = Math.floor(Math.random() * (maxNum - minNum)) + minNum;
+    return number;
+}

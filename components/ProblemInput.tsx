@@ -1,7 +1,9 @@
 import { View, StyleSheet, Text, TextInput, TouchableOpacity } from "react-native"
 import { COLORS } from "../constants/Colors"
+import { Level, Topic } from "../constants/Constants";
+import { GenerateNumber } from "../features/Features";
 
-export function ProblemInput() {
+export function ProblemInput(props : ProblemInputProp) {
     return (
         <View style={styles.container}>
             <Text>QUESTION</Text>
@@ -16,7 +18,7 @@ export function ProblemInput() {
                     />
                 <View style={styles.submit_button_view}>
                     <TouchableOpacity style={styles.submit_button}>
-                        <Text style={styles.submit_text}>Submit</Text>
+                        <Text style={styles.submit_text} onPress={()=>console.log(GenerateNumber(5, 25))}>Submit</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -24,8 +26,9 @@ export function ProblemInput() {
     )
 }
 
-function BinaryOperation() {
-
+export type ProblemInputProp = {
+    level? : Level,
+    topic? : Topic
 }
 
 const styles = StyleSheet.create({

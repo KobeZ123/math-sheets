@@ -2,23 +2,25 @@ import React, { useState } from "react";
 import { View, StyleSheet, Text, Button, Pressable, TouchableOpacity, ScrollView, Modal } from "react-native";
 
 import { COLORS } from '../constants/Colors';
-import { TOPICS } from '../constants/Constants';
+import { Topic, TOPICS } from '../constants/Constants';
 import ProblemSetModal from "./ProblemSetModal";
     
 
 export default function ChooseProblemSet() {
     const [openModal, setOpenModal] = useState(false);
+    const [selectedTopic, setSelectedTopic] = useState<Topic>();
     return (
         
         <ScrollView contentContainerStyle={styles.scrollview}>
         {
             TOPICS.map(
-                (item: string) => 
-                    <TouchableOpacity style={styles.button} key={item} onPress={(e) => setOpenModal(true)}>
-                        <Text style={styles.worksheet_label}>{item}</Text>
+                (item: Topic) => 
+                    <TouchableOpacity style={styles.button} key={item.name} onPress={(e) => {setSelectedTopic(item); setOpenModal(true);}}>
+                        <Text style={styles.worksheet_label}>{item.name}</Text>
                     </TouchableOpacity>)   
         }
-        <ProblemSetModal isVisible={openModal} setIsVisible={(e) => setOpenModal(false)} />
+        
+        <ProblemSetModal isVisible={openModal} setIsVisible={(e) => setOpenModal(false)} topic={selectedTopic} />
         </ScrollView>
       
     );

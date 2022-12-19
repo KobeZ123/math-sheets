@@ -1,25 +1,93 @@
 {
     "topics" : [
         {
-            "topic" : "Addition"
+            "name" : "Addition",
+            "levels" : [
+                {
+                    "name" : "1", 
+                    "minNumber" : 0, 
+                    "maxNumber" : 5
+                }, 
+                {
+                    "name" : "2", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 10
+                }, 
+                {
+                    "name" : "3", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 25
+                }
+            ]
         },
         {
-            "topic" : "Subtraction"
+            "name" : "Subtraction",
+            "levels" : [
+                {
+                    "name" : "1", 
+                    "minNumber" : 0, 
+                    "maxNumber" : 5
+                }, 
+                {
+                    "name" : "2", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 10
+                }, 
+                {
+                    "name" : "3", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 50
+                }
+            ]
         }, 
         {
-            "topic" : "Multiplication"
+            "name" : "Multiplication", 
+            "levels" : [
+                {
+                    "name" : "1", 
+                    "minNumber" : 0, 
+                    "maxNumber" : 5
+                }, 
+                {
+                    "name" : "2", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 9
+                }, 
+                {
+                    "name" : "3", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 13
+                }
+            ]
         }, 
         {
-            "topic" : "Division"
+            "name" : "Division", 
+            "levels" : [
+                {
+                    "name" : "1", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 4
+                }, 
+                {
+                    "name" : "2", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 8
+                }, 
+                {
+                    "name" : "3", 
+                    "minNumber" : 1, 
+                    "maxNumber" : 12
+                }
+            ]
         },
         {
-            "topic" : "Fractions"
+            "name" : "Fractions"
         },
         {
-            "topic" : "Decimals"
+            "name" : "Decimals"
         }, 
         {
-            "topic" : "Word Problems"
+            "name" : "Word Problems"
         }
     ]
 }

@@ -2,17 +2,24 @@ import user_information from '../data/information.json'
 import worksheets_information from '../data/worksheets.json'
 
 
-type UserInformation = {
+export type UserInformation = {
     user: string, 
     problemsSolved: number,
 }
 
-type Topic = {
-    topic: string,
+export type Topic = {
+    name: string,
+    levels: Level[]
+}
+
+export type Level = {
+    name: string,
+    minNumber: number, 
+    maxNumber: number,
 }
 
 export const USERINFO: UserInformation = user_information as UserInformation
 
-export const TOPICS: string[] = worksheets_information.topics as string[]
+export const TOPICS: Topic[] = worksheets_information.topics as Topic[]
 
 
